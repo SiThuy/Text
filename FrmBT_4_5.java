@@ -24,7 +24,8 @@ public class FrmBT_4_5 extends JFrame {
 	private JTextField txtN;
 	private JTextField txtS;
 	private JTextField txtKeyWord;
-	String chuoi = "";
+	private String[] arr = new String[100];
+	private int currentSize =0;
 	private JTextArea taList;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
