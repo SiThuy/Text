@@ -84,11 +84,7 @@ public class FrmBT_4_5 extends JFrame {
 		buttonGroup.add(btnNewButton);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String name = txtN.getText();
-				int score = Integer.parseInt(txtS.getText());
 				
-				chuoi += name + " " + score + "\n";
-				taList.setText(chuoi);
 				
 			}
 		});
@@ -100,10 +96,6 @@ public class FrmBT_4_5 extends JFrame {
 		btnSortNmae.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				String[] arr = {taList.getText()};
-				Arrays.sort(arr);
-				for (String element: arr) {
-					taList.setText(element);
 				}
 			}
 		
@@ -116,18 +108,7 @@ public class FrmBT_4_5 extends JFrame {
 		JButton btnSortScore = new JButton("Sort Score");
 		btnSortScore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String[] arr = {taList.getText()};
 				
-				Arrays.sort(arr, new Comparator<String>() {
-					
-					
-				@Override
-				public int compare (String o1, String o2) {
-					String[] split1 = o1.split(" ");
-					String[] split2 = o2.split(" ");
-					return Integer.parseInt(split1[1]) - Integer.parseInt(split2[1]);
-				}
-				});
 			}
 			});
 		btnSortScore.setBounds(364, 136, 129, 48);
